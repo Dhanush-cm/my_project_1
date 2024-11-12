@@ -8,7 +8,7 @@ export default function Apply() {
   const [additionalInfo, setAdditionalInfo] = useState('');
   const [file, setFile] = useState(null);
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: { target: { files: SetStateAction<null>[]; }; }) => {
     setFile(e.target.files[0]);
   };
 
