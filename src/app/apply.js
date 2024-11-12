@@ -1,4 +1,3 @@
-'use client'
 import { useState } from 'react';
 
 export default function Apply() {
@@ -31,12 +30,12 @@ export default function Apply() {
       <header style={styles.header}>
         <span style={styles.logo}>Logo</span>
         <span style={styles.text}>SentinelGuardAI</span>
-        <span style={styles.nav}>
+        <nav style={styles.nav}>
           <a href="#">Home</a>
           <a href="#">Services</a>
           <a href="#">Contact</a>
           <a href="#" style={styles.activeLink}>Apply</a>
-        </span>
+        </nav>
       </header>
       <main style={styles.main}>
         <h1 style={styles.title}>Tech Hiring</h1>
@@ -78,18 +77,16 @@ export default function Apply() {
             onChange={(e) => setExperience(e.target.value)}
             placeholder="Your Experience (if any)"
             maxLength="120"
-            rows="2"
-            style={styles.textarea1}
+            rows="3"
+            style={styles.textarea}
           />
           <textarea
             value={applicationReason}
             onChange={(e) => setApplicationReason(e.target.value)}
-            padding-left="200%"
-            
             placeholder="Why are you applying to this particular role?"
             maxLength="120"
-            rows="2"
-            style={styles.textarea2}
+            rows="3"
+            style={styles.textarea}
           />
           <textarea
             value={additionalInfo}
@@ -97,9 +94,8 @@ export default function Apply() {
             placeholder="Is there anything else you would like us to know?"
             maxLength="60"
             rows="2"
-            style={styles.textarea3}
+            style={styles.smallTextarea}
           />
-          
           <button type="submit" style={styles.submitButton}>Submit</button>
         </form>
       </main>
@@ -108,43 +104,33 @@ export default function Apply() {
 }
 
 const styles = {
-  header: {
-    display:'flex',
-    
-    
-    fontSize: '18px',
-  },
   container: {
     fontFamily: 'Arial, sans-serif',
     color: '#333',
     textAlign: 'center',
   },
-
-  logo: {
-    padding: '29px 30px',
-    fontSize: '70%',
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '10px 40px',
+    fontSize: '18px',
+    borderBottom: '1px solid #ddd',
   },
-  text: {
-    fontSize: '70%',
-    padding: '29px 30px',
-  
-
+  logo: {
+    fontWeight: 'bold',
   },
   nav: {
-    fontSize: '70%',
     display: 'flex',
     gap: '20px',
-    padding: '29px 22%',
   },
   activeLink: {
-    color: '#',
+    color: '#0070f3',
     fontWeight: 'bold',
   },
   main: {
-    padding: '20px 115px',
+    padding: '20px 40px',
     maxWidth: '800px',
     margin: '0 auto',
-    
   },
   title: {
     fontSize: '32px',
@@ -161,22 +147,18 @@ const styles = {
     justifyContent: 'space-between',
     width: '100%',
     marginBottom: '20px',
-    fontSize: '70%',
   },
   radioColumn: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    fontSize: '80%',
   },
   radioLabel: {
-    fontSize: '12px',
+    fontSize: '16px',
     marginBottom: '8px',
-    marginLeft: '10px',
   },
   radioButton: {
-    marginRight: '1px',
-    marginTop: 'px',
+    marginRight: '10px',
   },
   fileInput: {
     textAlign: 'center',
@@ -185,43 +167,30 @@ const styles = {
   fileUpload: {
     marginTop: '10px',
   },
-  textarea1: {
+  textarea: {
     width: '100%',
     padding: '10px',
-    fontSize: '70%',
+    fontSize: '16px',
     border: '1px solid #ddd',
-    borderRadius: '15px',
+    borderRadius: '5px',
     resize: 'none',
   },
-  textarea2: {
+  smallTextarea: {
     width: '100%',
     padding: '10px',
-    fontSize: '70%',
+    fontSize: '16px',
     border: '1px solid #ddd',
-    borderRadius: '15px',
+    borderRadius: '5px',
     resize: 'none',
-    marginRight: '105%',
-    
+    maxWidth: '50%',
   },
-  textarea3: {
-    width: '100%',
-    padding: '10px',
-    fontSize: '70%',
-    border: '1px solid #ddd',
-    borderRadius: '15px',
-    resize: 'none',
-    marginLeft: '105%',
-    margin: '-70px 50px 75px 650px',
-  },
-  
   submitButton: {
     backgroundColor: '#0070f3',
     color: '#fff',
-    padding: '5px 250px',
+    padding: '10px 20px',
     border: 'none',
-    borderRadius: '15px',
+    borderRadius: '5px',
     fontSize: '16px',
     cursor: 'pointer',
-    marginTop: '-70px'
   },
 };

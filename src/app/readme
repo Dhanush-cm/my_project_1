@@ -1,0 +1,30 @@
+display: 'flex',
+    gap: '0px',
+    width: '0%',
+    position: 'relative',
+    left: '-35%',
+
+      header: {
+    display:'flex',
+    justifyContent: 'space-between',
+    padding: '10px 40px',
+    fontSize: '18px',
+    borderBottom: '1px solid #ddd',
+  },
+
+   style={styles.activeLink
+
+    header: {
+    display:'flex',
+    justifyContent: 'space-between',
+    padding: '10px 40px',
+    fontSize: '18px',
+  },
+
+  fontWeight: 'bold',
+    display: 'flex',
+    gap: '0px',
+    width: '0%',
+    position: 'relative',
+    left: '-32%',
+    
