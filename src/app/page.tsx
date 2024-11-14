@@ -1,8 +1,5 @@
 'use client'
-'use State'
-import { } from 'react';
-
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 
 export default function Apply() {
   const [selectedRole, setSelectedRole] = useState('');
@@ -15,11 +12,11 @@ export default function Apply() {
   const [] = useState<SetStateAction<string>>('');
 
 
-  const handleFileChange = (e: { target: { files: SetStateAction<null>[]; }; }) => {
+  const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('role', selectedRole);
@@ -31,7 +28,7 @@ export default function Apply() {
     // Send formData to the server
     console.log('Form submitted');
     // Add form submission handling here
-  };
+  }
 
   return (
     <div style={styles.container}>
@@ -141,7 +138,7 @@ const styles = {
     fontSize: '70%',
     display: 'flex',
     gap: '20px',
-    padding: '29px 22%',
+    padding: '29px 29%',
   },
   activeLink: {
     color: '#',
