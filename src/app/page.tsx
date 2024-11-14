@@ -1,5 +1,8 @@
 'use client'
-import { useState } from 'react';
+'use State'
+import { } from 'react';
+
+import { SetStateAction, useState } from 'react';
 
 export default function Apply() {
   const [selectedRole, setSelectedRole] = useState('');
@@ -8,11 +11,15 @@ export default function Apply() {
   const [additionalInfo, setAdditionalInfo] = useState('');
   const [file, setFile] = useState(null);
 
+  
+  const [] = useState<SetStateAction<string>>('');
+
+
   const handleFileChange = (e: { target: { files: SetStateAction<null>[]; }; }) => {
     setFile(e.target.files[0]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('role', selectedRole);
